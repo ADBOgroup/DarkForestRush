@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Script\BackGroundPicture\BgScript.cs" />
+     <Compile Include="Assets\Script\CharacterScript\MainCharacter.cs" />
      <Compile Include="Assets\Script\ObstacleScript\Obstacle.cs" />
      <Compile Include="Assets\Script\ObstacleScript\ObstaclesGeneratorScript.cs" />
  <Reference Include="UnityEngine.UI">
