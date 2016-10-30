@@ -45,7 +45,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Script\BackgroundPicture\Background.cs" />
+     <Compile Include="Assets\Script\BackGroundPicture\Background.cs" />
      <Compile Include="Assets\Script\CharacterScript\MainCharacter.cs" />
      <Compile Include="Assets\Script\ObstacleScript\Obstacle.cs" />
      <Compile Include="Assets\Script\ObstacleScript\ObstaclesGenerator.cs" />
