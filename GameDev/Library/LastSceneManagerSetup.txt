@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/DarkForestRush.unity
+- path: Assets/Scene/DarkForestRush.unity
   isLoaded: 1
   isActive: 1

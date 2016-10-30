@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class Obstacle : MonoBehaviour {
-	public Vector2 velocity = new Vector2 (Time.time * 0.1f, 0);
+	public Vector2 velocity = new Vector2 (0, 0);
 	public Rigidbody2D rb;
 
 	// Use this for initialization
