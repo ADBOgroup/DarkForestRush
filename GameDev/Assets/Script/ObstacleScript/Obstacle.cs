@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+//kelas untuk meng-update posisi dari obstacle
 public class Obstacle : MonoBehaviour {
+	//posisi obstacle menyentuh tanah ?????????????????????
 	public Vector2 velocity = new Vector2 (0, 0);
 	public Rigidbody2D rb;
 
