@@ -7,7 +7,8 @@ using System.Collections;
 public class MainCharacter : MonoBehaviour {
 	//tinggi lompatan karakter
 	public Vector2 jumpPower = new Vector2(0,200);
-	public Text scoreText;
+	public GameObject score;
+	private Text scoreText;
 
 	//fungsi boolean untuk memeriksa posisi karakter
 	//true jika karakter tidak sedang lompat
@@ -17,10 +18,14 @@ public class MainCharacter : MonoBehaviour {
 
 	private int count;
 
-	void start(){
+	void Start(){
 		rb = GetComponent<Rigidbody2D> ();
 		count = 0;
+		scoreText = score.GetComponent<Text> ();
 		setScore ();
+
+		InvokeRepeating ("incCount", 0.0f, 0.1f);
+
 	}
 
 	//method untuk memeriksa collision dari karakter
@@ -33,13 +38,14 @@ public class MainCharacter : MonoBehaviour {
 		}
 		if (coll.gameObject.name == "Obstacle") {
 			Time.timeScale = 0;
+			rb.constraints = RigidbodyConstraints2D.FreezeAll;
 		}
 	}
 
 
 	// Update is called once per frame
 	void Update () {
-		count++;
+		
 		//jika karakter menyentuh tanah, karakter lompat 1x
 		if (Input.GetKeyDown ("up") && this.grounded) {
 			rb.AddForce (jumpPower);
@@ -71,5 +77,9 @@ public class MainCharacter : MonoBehaviour {
 
 	void setScore (){
 		scoreText.text = "Score: " + count.ToString ();
+	}
+
+	void incCount(){
+		count++;
 	}
 }
