@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 //kelas untuk mengatur pergerakan dari karakter pemain
@@ -6,6 +7,7 @@ using System.Collections;
 public class MainCharacter : MonoBehaviour {
 	//tinggi lompatan karakter
 	public Vector2 jumpPower = new Vector2(0,200);
+	public Text scoreText;
 
 	//fungsi boolean untuk memeriksa posisi karakter
 	//true jika karakter tidak sedang lompat
@@ -13,9 +15,12 @@ public class MainCharacter : MonoBehaviour {
 
 	public Rigidbody2D rb;
 
+	private int count;
 
 	void start(){
 		rb = GetComponent<Rigidbody2D> ();
+		count = 0;
+		setScore ();
 	}
 
 	//method untuk memeriksa collision dari karakter
@@ -34,6 +39,7 @@ public class MainCharacter : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		count++;
 		//jika karakter menyentuh tanah, karakter lompat 1x
 		if (Input.GetKeyDown ("up") && this.grounded) {
 			rb.AddForce (jumpPower);
@@ -59,6 +65,11 @@ public class MainCharacter : MonoBehaviour {
 				rb.gravityScale = 1f;
 				transform.localScale = new Vector2(3f,3f);
 			}
+		setScore ();
 
+	}
+
+	void setScore (){
+		scoreText.text = "Score: " + count.ToString ();
 	}
 }
