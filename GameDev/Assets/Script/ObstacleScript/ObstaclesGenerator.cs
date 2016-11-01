@@ -2,6 +2,11 @@
 using System.Collections;
 
 //kelas untuk meng-generate obstacle baru
+/**
+ * 
+ * 
+ * 
+ */
 public class ObstaclesGenerator : MonoBehaviour {
 	public GameObject[] obstacles;
 

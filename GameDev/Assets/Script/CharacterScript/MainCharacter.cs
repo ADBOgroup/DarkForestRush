@@ -20,8 +20,7 @@ public class MainCharacter : MonoBehaviour {
 
 	//method untuk memeriksa collision dari karakter
 	//jika karakter collision dengan ground, grounded = true
-	//jika karakter collision dengan obstacle, 
-	//INI APAAN WOI TAKUT SALAH
+	//jika karakter collision dengan obstacle maka permainan berhenti
 	//@Override
 	void OnCollisionEnter2D(Collision2D coll){
 		if (coll.gameObject.tag == "ground"){
