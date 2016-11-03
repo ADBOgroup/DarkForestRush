@@ -7,24 +7,34 @@ using System.Collections;
 public class MainCharacter : MonoBehaviour {
 	//tinggi lompatan karakter
 	public Vector2 jumpPower = new Vector2(0,200);
-	public GameObject score;
-	private Text scoreText;
+	public Rigidbody2D rb;
+
 
 	//fungsi boolean untuk memeriksa posisi karakter
 	//true jika karakter tidak sedang lompat
 	public bool grounded = true;
 
-	public Rigidbody2D rb;
-
+	//Score
 	private int count;
+	public GameObject score;
+	private Text scoreText;
+
+	//HighScore
+	private int highScoreCount;
+	public GameObject highScore;
+	private Text highScoreText;
 
 	void Start(){
 		rb = GetComponent<Rigidbody2D> ();
 		count = 0;
 		scoreText = score.GetComponent<Text> ();
-		setScore ();
+		highScoreText = highScore.GetComponent<Text> ();
 
+		setScore ();
 		InvokeRepeating ("incCount", 0.0f, 0.1f);
+		PlayerPrefs.SetInt("highScoreCount" , highScoreCount);
+		highScoreText.text = "High Score: " + highScoreCount.ToString ();
+
 
 	}
 
@@ -37,8 +47,8 @@ public class MainCharacter : MonoBehaviour {
 			this.grounded = true;
 		}
 		if (coll.gameObject.name == "Obstacle") {
-			Time.timeScale = 0;
 			rb.constraints = RigidbodyConstraints2D.FreezeAll;
+			Application.LoadLevel ("Retry");
 		}
 	}
 
@@ -71,8 +81,17 @@ public class MainCharacter : MonoBehaviour {
 				rb.gravityScale = 1f;
 				transform.localScale = new Vector2(3f,3f);
 			}
+		setHighScore ();
 		setScore ();
 
+	}
+
+	void setHighScore(){
+		if (count > highScoreCount) {
+			highScoreCount = count;
+			PlayerPrefs.SetInt("highScoreCount" , highScoreCount);
+			highScoreText.text = "High Score: " + highScoreCount.ToString ();
+		}
 	}
 
 	void setScore (){
