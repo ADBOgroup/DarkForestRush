@@ -58,35 +58,22 @@ public class MainCharacter : MonoBehaviour {
 		
 		//jika karakter menyentuh tanah, karakter lompat 1x
 		if (Input.GetKeyDown ("up") && this.grounded) {
-			rb.AddForce (jumpPower);
-			this.grounded = false;
-			rb.gravityScale = 1f;
-			transform.localScale = new Vector2 (3f, 3f);
+			jump ();
 		}
 		//Pencet "down"
 		if(Input.GetKeyDown("down")){
-			//waktu di udara karakter turun dengan cepat
-			if(!this.grounded){
-				rb.gravityScale = 6;
-				transform.localScale = new Vector2(1.8f,1.8f);
-			}
-			//waktu di tanah karakter menjadi kecil untuk menghindari obstacle terbang
-			else{
-				rb.gravityScale = 1f;
-				transform.localScale = new Vector2(1.8f,1.8f);
-			}
+			crouch();
 		}
 		//karakter mengecil untuk menghindari obstacle terbang
 		if(Input.GetKeyUp("down")){
-				rb.gravityScale = 1f;
-				transform.localScale = new Vector2(3f,3f);
-			}
+			stand ();
+		}
 		setHighScore ();
 		setScore ();
 
 	}
 
-	void setHighScore(){
+	private void setHighScore(){
 		if (count > highScoreCount) {
 			highScoreCount = count;
 			PlayerPrefs.SetInt("highScoreCount" , highScoreCount);
@@ -94,11 +81,32 @@ public class MainCharacter : MonoBehaviour {
 		}
 	}
 
-	void setScore (){
+	private void setScore (){
 		scoreText.text = "Score: " + count.ToString ();
 	}
 
-	void incCount(){
+	private void incCount(){
 		count++;
+	}
+	private void jump(){
+		rb.AddForce (jumpPower);
+		this.grounded = false;
+		rb.gravityScale = 1f;
+		transform.localScale = new Vector2 (3f, 3f);
+	}
+	private void crouch(){
+				if(!this.grounded){
+					rb.gravityScale = 6;
+					transform.localScale = new Vector2(1.8f,1.8f);
+				}
+				//waktu di tanah karakter menjadi kecil untuk menghindari obstacle terbang
+				else{
+					rb.gravityScale = 1f;
+					transform.localScale = new Vector2(1.8f,1.8f);
+				}
+	}
+	private void stand(){
+		rb.gravityScale = 1f;
+		transform.localScale = new Vector2(3f,3f);
 	}
 }
