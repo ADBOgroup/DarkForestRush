@@ -3,9 +3,9 @@ using System.Collections;
 
 //kelas untuk meng-generate obstacle baru
 /**
- * 
- * 
- * 
+ *
+ *
+ *
  */
 public class ObstaclesGenerator : MonoBehaviour {
 	public GameObject[] obstacles;
@@ -26,14 +26,8 @@ public class ObstaclesGenerator : MonoBehaviour {
 			                   transform.position,
 			                   Quaternion.identity
 		                   );
-		clone.name = "Obstacle";		
+		clone.name = "Obstacle";
 		float obstacleRandomRange = Random.Range (speedMin, speedMax);
 		Invoke ("generateObstacles",obstacleRandomRange);
-		if (speedMin > 1.5f) {
-			speedMin -= 0.4f;
-		}
-		if (speedMax > 2.5f) {
-			speedMax -= 0.4f;
-		}
 	}
 }

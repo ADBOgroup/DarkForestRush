@@ -2,57 +2,46 @@ Initialize engine version: 5.4.1f1 (649f48bbbf0f)
 GfxDevice: creating device client; threaded=1
 Direct3D:
     Version:  Direct3D 11.0 [level 11.0]
-    Renderer: AMD Radeon HD 8330 (ID=0x9832)
-    Vendor:   ATI
-    VRAM:     1890 MB
+    Renderer: NVIDIA GeForce GTX 750 Ti (ID=0x1380)
+    Vendor:   NVIDIA
+    VRAM:     1992 MB
 Begin MonoManager ReloadAssembly
-Platform assembly: C:\Users\toshiba pc\Desktop\IT\Semester 3\ADBO\DarkForestRush\GameDev\Coba_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading C:\Users\toshiba pc\Desktop\IT\Semester 3\ADBO\DarkForestRush\GameDev\Coba_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: C:\Users\toshiba pc\Desktop\IT\Semester 3\ADBO\DarkForestRush\GameDev\Coba_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading C:\Users\toshiba pc\Desktop\IT\Semester 3\ADBO\DarkForestRush\GameDev\Coba_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: C:\Users\toshiba pc\Desktop\IT\Semester 3\ADBO\DarkForestRush\GameDev\Coba_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading C:\Users\toshiba pc\Desktop\IT\Semester 3\ADBO\DarkForestRush\GameDev\Coba_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-Platform assembly: C:\Users\toshiba pc\Desktop\IT\Semester 3\ADBO\DarkForestRush\GameDev\Coba_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
-Loading C:\Users\toshiba pc\Desktop\IT\Semester 3\ADBO\DarkForestRush\GameDev\Coba_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-Platform assembly: C:\Users\toshiba pc\Desktop\IT\Semester 3\ADBO\DarkForestRush\GameDev\Coba_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
-Loading C:\Users\toshiba pc\Desktop\IT\Semester 3\ADBO\DarkForestRush\GameDev\Coba_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
-- Completed reload, in  0.530 seconds
-Platform assembly: C:\Users\toshiba pc\Desktop\IT\Semester 3\ADBO\DarkForestRush\GameDev\Coba_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: C:\Users\toshiba pc\Desktop\IT\Semester 3\ADBO\DarkForestRush\GameDev\Coba_Data\Managed\System.dll (this message is harmless)
-desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
+Platform assembly: C:\Users\miebakso\Desktop\DarkForestRush\GameDev\Coba_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\miebakso\Desktop\DarkForestRush\GameDev\Coba_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\miebakso\Desktop\DarkForestRush\GameDev\Coba_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\miebakso\Desktop\DarkForestRush\GameDev\Coba_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\miebakso\Desktop\DarkForestRush\GameDev\Coba_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\miebakso\Desktop\DarkForestRush\GameDev\Coba_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\miebakso\Desktop\DarkForestRush\GameDev\Coba_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\miebakso\Desktop\DarkForestRush\GameDev\Coba_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\miebakso\Desktop\DarkForestRush\GameDev\Coba_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading C:\Users\miebakso\Desktop\DarkForestRush\GameDev\Coba_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+- Completed reload, in  0.035 seconds
+Platform assembly: C:\Users\miebakso\Desktop\DarkForestRush\GameDev\Coba_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\miebakso\Desktop\DarkForestRush\GameDev\Coba_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 3.262430 ms
+UnloadTime: 0.649761 ms
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 15.365570 ms
+UnloadTime: 3.014289 ms
 
 Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 242.
-Total: 0.794063 ms (FindLiveObjects: 0.070446 ms CreateObjectMapping: 0.037617 ms MarkObjects: 0.503385 ms  DeleteObjects: 0.127214 ms)
+Total: 0.202356 ms (FindLiveObjects: 0.013661 ms CreateObjectMapping: 0.009392 ms MarkObjects: 0.135758 ms  DeleteObjects: 0.031306 ms)
 
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 5.450379 ms
+UnloadTime: 1.330260 ms
 
 Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 212.
-Total: 5.762259 ms (FindLiveObjects: 0.077286 ms CreateObjectMapping: 0.020518 ms MarkObjects: 0.486286 ms  DeleteObjects: 5.176800 ms)
-
-Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 2.285753 ms
-
-Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 242.
-Total: 0.689419 ms (FindLiveObjects: 0.073182 ms CreateObjectMapping: 0.019834 ms MarkObjects: 0.471239 ms  DeleteObjects: 0.123794 ms)
-
-Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 1.268039 ms
-
-Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 212.
-Total: 5.766363 ms (FindLiveObjects: 0.075918 ms CreateObjectMapping: 0.019834 ms MarkObjects: 0.469188 ms  DeleteObjects: 5.199370 ms)
+Total: 1.845971 ms (FindLiveObjects: 0.024476 ms CreateObjectMapping: 0.014799 ms MarkObjects: 0.136612 ms  DeleteObjects: 1.669798 ms)
 
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 1.160659 ms
+UnloadTime: 0.489242 ms
 
 Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 202.
-Total: 0.647014 ms (FindLiveObjects: 0.058135 ms CreateObjectMapping: 0.018466 ms MarkObjects: 0.445933 ms  DeleteObjects: 0.123110 ms)
+Total: 0.180441 ms (FindLiveObjects: 0.011099 ms CreateObjectMapping: 0.004838 ms MarkObjects: 0.130066 ms  DeleteObjects: 0.033868 ms)
 
-Setting up 1 worker threads for Enlighten.
-  Thread -> id: 23c0 -> priority: 1 
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 344 -> priority: 1 
+  Thread -> id: f64 -> priority: 1 
