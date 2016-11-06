@@ -3,8 +3,8 @@ using System.Collections;
 
 //kelas untuk meng-update posisi dari obstacle
 public class Obstacle : MonoBehaviour {
-    public static float speed = -5.0f;
-	public Rigidbody2D rb;
+    private static float speed = -5.0f;
+	private Rigidbody2D rb;
 
     
 
@@ -26,13 +26,13 @@ public class Obstacle : MonoBehaviour {
         }
     }
 
-    public void increaseSpeed() {
+    private void increaseSpeed() {
         if (speed > -10f) {
             speed -= 0.05f;
         }
     }
 
-    public void destroyObstacle() {
+    private void destroyObstacle() {
         Destroy(gameObject);
     }
 }

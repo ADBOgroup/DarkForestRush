@@ -9,22 +9,22 @@ public class Background : MonoBehaviour {
 
 	// To do -> nge scroll background
 	// background akan bergerak dengan kecepatan yang terus bertambah
-	void Update () {
-        Vector2 offset = new Vector2(Time.time * speed, 0);
+	void Update () { 
         if (speed < 0.25f)
         {
-            speed += 0.00000001f;
+            increaseBGSpeed();
         }
-        GetComponent<Renderer>().material.mainTextureOffset = offset;
+        renderBG();
     }
 
     private void increaseBGSpeed()
     {
-        
+        speed += 0.00000001f;
     }
 
     private void renderBG()
     {
-        
+        Vector2 offset = new Vector2(Time.time * speed, 0);
+        GetComponent<Renderer>().material.mainTextureOffset = offset;
     }
 }
