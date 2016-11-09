@@ -10,17 +10,23 @@ using System.Collections;
 public class ObstaclesGenerator : MonoBehaviour {
 	public GameObject[] obstacles;
 
-	//kecepatan maksimal dari obstacle
+	
 	public float speedMax = 7.5f;
-	//kecepatan minimal dari obstacle
+	
 	public float speedMin = 5.5f;
-	// Use this for initialization
-	void Start () {
+
+    /// <summary>
+    /// method untuk menjalankan method generateObstacles()
+    /// </summary>
+    void Start () {
 		generateObstacles ();
 	}
 
-	//method untuk generate obstacle baru secara random
-	public void generateObstacles (){
+    /// <summary>
+    /// method yang digunakan untuk meng-generate obstacles
+    ///sesuai dengan kecepatan yang tetap dan posisi yang dirandom pada background picture
+    /// </summary>
+    public void generateObstacles (){
 		GameObject clone = (GameObject)Instantiate (
 			                   obstacles [Random.Range (0, obstacles.Length)],
 			                   transform.position,
