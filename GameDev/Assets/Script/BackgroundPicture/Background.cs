@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-//kelas untuk nge scroll background
+//Class of Background
+//
 public class Background : MonoBehaviour {
 
 	//kecepatan awal dari background
