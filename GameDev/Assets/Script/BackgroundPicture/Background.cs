@@ -17,11 +17,13 @@ public class Background : MonoBehaviour {
         renderBG();
     }
 
+	//Function to make the Background more fast
     private void increaseBGSpeed()
     {
         speed += 0.00000001f;
     }
-
+	
+	//Function to render frame per frame
     private void renderBG()
     {
         Vector2 offset = new Vector2(Time.time * speed, 0);

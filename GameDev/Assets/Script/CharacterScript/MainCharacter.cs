@@ -2,8 +2,8 @@
 using UnityEngine.UI;
 using System.Collections;
 
-//kelas untuk mengatur pergerakan dari karakter pemain
-
+//Class of MainCharacter
+//Function to optimize character movement
 public class MainCharacter : MonoBehaviour {
 	//tinggi lompatan karakter
 	public Vector2 jumpPower = new Vector2(0,200);
@@ -23,7 +23,8 @@ public class MainCharacter : MonoBehaviour {
 	private int highScoreCount;
 	public GameObject highScore;
 	private Text highScoreText;
-
+	
+	//Function to start the character
 	void Start(){
 		rb = GetComponent<Rigidbody2D> ();
 		count = 0;
@@ -72,7 +73,8 @@ public class MainCharacter : MonoBehaviour {
 		setScore ();
 
 	}
-
+	
+	//function to set the high score
 	private void setHighScore(){
 		if (count > highScoreCount) {
 			highScoreCount = count;
@@ -80,20 +82,26 @@ public class MainCharacter : MonoBehaviour {
 			highScoreText.text = "High Score: " + highScoreCount.ToString ();
 		}
 	}
-
+	
+	//function to set the counter to score
 	private void setScore (){
 		scoreText.text = "Score: " + count.ToString ();
 	}
-
+	
+	//function to increase count
 	private void incCount(){
 		count++;
 	}
+	
+	//function to make character jump
 	private void jump(){
 		rb.AddForce (jumpPower);
 		this.grounded = false;
 		rb.gravityScale = 1f;
 		transform.localScale = new Vector2 (3f, 3f);
 	}
+	
+	//function to make character crouch
 	private void crouch(){
 				if(!this.grounded){
 					rb.gravityScale = 6;
@@ -105,6 +113,8 @@ public class MainCharacter : MonoBehaviour {
 					transform.localScale = new Vector2(1.8f,1.8f);
 				}
 	}
+	
+	//function to make character walking normally
 	private void stand(){
 		rb.gravityScale = 1f;
 		transform.localScale = new Vector2(3f,3f);

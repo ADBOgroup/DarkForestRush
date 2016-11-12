@@ -1,25 +1,21 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-//kelas untuk meng-generate obstacle baru
-/**
- *
- *
- *
- */
+//Class of ObstaclesGenerator
+//function to create Obstacle
 public class ObstaclesGenerator : MonoBehaviour {
 	public GameObject[] obstacles;
 
-	//kecepatan maksimal dari obstacle
+	//Maximum Speed from obstacle
 	public float speedMax = 7.5f;
-	//kecepatan minimal dari obstacle
+	//Minimum Speed from Obstacle
 	public float speedMin = 5.5f;
 	// Use this for initialization
 	void Start () {
 		generateObstacles ();
 	}
 
-	//method untuk generate obstacle baru secara random
+	//Function to generateObstacles with random function.
 	public void generateObstacles (){
 		GameObject clone = (GameObject)Instantiate (
 			                   obstacles [Random.Range (0, obstacles.Length)],

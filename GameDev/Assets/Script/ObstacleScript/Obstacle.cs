@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-//kelas untuk meng-update posisi dari obstacle
+//Class of Obstacle
 public class Obstacle : MonoBehaviour {
     private static float speed = -5.0f;
 	private Rigidbody2D rb;
@@ -26,12 +26,14 @@ public class Obstacle : MonoBehaviour {
         }
     }
 
+	//Update speed
     private void increaseSpeed() {
         if (speed > -10f) {
             speed -= 0.05f;
         }
     }
-
+	
+	//Destroy the obstacle
     private void destroyObstacle() {
         Destroy(gameObject);
     }
