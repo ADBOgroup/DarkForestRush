@@ -1,0 +1,66 @@
+Initialize engine version: 5.4.1f1 (649f48bbbf0f)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: AMD Radeon HD 8330 (ID=0x9832)
+    Vendor:   ATI
+    VRAM:     1890 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\toshiba pc\Desktop\IT\Semester 3\ADBO\DarkForestRush\DarkForestRush\GameDev\Dark Forest Rush_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\toshiba pc\Desktop\IT\Semester 3\ADBO\DarkForestRush\DarkForestRush\GameDev\Dark Forest Rush_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\toshiba pc\Desktop\IT\Semester 3\ADBO\DarkForestRush\DarkForestRush\GameDev\Dark Forest Rush_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\toshiba pc\Desktop\IT\Semester 3\ADBO\DarkForestRush\DarkForestRush\GameDev\Dark Forest Rush_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\toshiba pc\Desktop\IT\Semester 3\ADBO\DarkForestRush\DarkForestRush\GameDev\Dark Forest Rush_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\toshiba pc\Desktop\IT\Semester 3\ADBO\DarkForestRush\DarkForestRush\GameDev\Dark Forest Rush_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\toshiba pc\Desktop\IT\Semester 3\ADBO\DarkForestRush\DarkForestRush\GameDev\Dark Forest Rush_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\toshiba pc\Desktop\IT\Semester 3\ADBO\DarkForestRush\DarkForestRush\GameDev\Dark Forest Rush_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\toshiba pc\Desktop\IT\Semester 3\ADBO\DarkForestRush\DarkForestRush\GameDev\Dark Forest Rush_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading C:\Users\toshiba pc\Desktop\IT\Semester 3\ADBO\DarkForestRush\DarkForestRush\GameDev\Dark Forest Rush_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+- Completed reload, in  1.451 seconds
+Platform assembly: C:\Users\toshiba pc\Desktop\IT\Semester 3\ADBO\DarkForestRush\DarkForestRush\GameDev\Dark Forest Rush_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\toshiba pc\Desktop\IT\Semester 3\ADBO\DarkForestRush\DarkForestRush\GameDev\Dark Forest Rush_Data\Managed\System.dll (this message is harmless)
+desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 3.297996 ms
+The referenced script on this Behaviour (Game Object 'Headless Horsman') is missing!
+ 
+(Filename:  Line: 1656)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 16.398331 ms
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 257.
+Total: 1.015662 ms (FindLiveObjects: 0.077970 ms CreateObjectMapping: 0.048560 ms MarkObjects: 0.589562 ms  DeleteObjects: 0.147732 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 7.450926 ms
+
+Unloading 54 unused Assets to reduce memory usage. Loaded Objects now: 210.
+Total: 7.588400 ms (FindLiveObjects: 0.098488 ms CreateObjectMapping: 0.030093 ms MarkObjects: 0.636755 ms  DeleteObjects: 6.819642 ms)
+
+The referenced script on this Behaviour (Game Object 'Headless Horsman') is missing!
+ 
+(Filename:  Line: 1656)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.937623 ms
+
+Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 257.
+Total: 0.762601 ms (FindLiveObjects: 0.084125 ms CreateObjectMapping: 0.028725 ms MarkObjects: 0.506805 ms  DeleteObjects: 0.140209 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.559400 ms
+
+Unloading 54 unused Assets to reduce memory usage. Loaded Objects now: 210.
+Total: 9.302373 ms (FindLiveObjects: 0.088913 ms CreateObjectMapping: 0.030093 ms MarkObjects: 0.649066 ms  DeleteObjects: 8.532932 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 2.898570 ms
+
+Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 200.
+Total: 1.393885 ms (FindLiveObjects: 0.098488 ms CreateObjectMapping: 0.036249 ms MarkObjects: 0.890499 ms  DeleteObjects: 0.365912 ms)
+
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 126c -> priority: 1 
