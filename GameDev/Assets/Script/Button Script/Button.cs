@@ -4,15 +4,21 @@ using System.Collections;
 //Class of Button
 public class Button : MonoBehaviour {
 	
-	//Play Button
+	/// <summary>
+    /// play button on click
+    /// </summary>
 	public void playButton(){
 		Application.LoadLevel ("Play");
 	}
-	//No Button
+	/// <summary>
+    /// no button on click
+    /// </summary>
 	public void noButton(){
 		Application.LoadLevel ("Menu");
 	}
-	//Exit Button
+	/// <summary>
+    /// exit button on click
+    /// </summary>
 	public void exit(){
 		Application.Quit();
 	}

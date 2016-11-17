@@ -15,7 +15,9 @@ public class ObstaclesGenerator : MonoBehaviour {
 		generateObstacles ();
 	}
 
-	//Function to generateObstacles with random function.
+	/// <summary>
+    /// menggenerate obstacle  dengan kecepatan yang ditentukan dan posisi yang ditentukan
+    /// </summary>
 	public void generateObstacles (){
 		GameObject clone = (GameObject)Instantiate (
 			                   obstacles [Random.Range (0, obstacles.Length)],

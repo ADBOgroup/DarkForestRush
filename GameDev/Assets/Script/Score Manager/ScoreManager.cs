@@ -16,7 +16,9 @@ public class ScoreManager : MonoBehaviour {
 
 	public bool scoreIncreasing;
 
-	// Use this for initialization
+	/// <summary>
+    /// start jika dipanggil dan menampilkan high score terakhir
+    /// </summary>
 	void Start () {
 		//highscore di simpan dan bakal di tampilkan waktu start
 		audio = GetComponent<AudioSource>();
@@ -24,7 +26,10 @@ public class ScoreManager : MonoBehaviour {
 		highScoreText.text = "High Score: " + Mathf.Round(highScoreCount);
 	}
 
-	// Update is called once per frame
+	/// <summary>
+    /// menambahkan score sesuai dengan waktu yang telah ditetapkan dan mengubah highscore
+    /// memutar sound efek setiap score kelipatan 100
+    /// </summary>
 	void Update () {
 		scoreCount += scorePerSecond * Time.deltaTime * 8;
 		//score bertambah sesuai lama waktu bermain
@@ -36,8 +41,13 @@ public class ScoreManager : MonoBehaviour {
 		if(scoreText.text.Equals("100")){
 			playSong();
 		}
-		scoreText.text = "Score: " + Mathf.Round(scoreCount);
+        PlayerPrefs.SetFloat("scoreCount", Mathf.Round(scoreCount));
+
+        scoreText.text = "Score: " + Mathf.Round(scoreCount);
 	}
+    /// <summary>
+    /// memutar sound efek
+    /// </summary>
 	void playSong(){
 		audio.Play ();
 	}

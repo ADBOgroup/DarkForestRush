@@ -14,14 +14,18 @@ public class MainCharacter : MonoBehaviour {
 	//true jika karakter tidak sedang lompat
 	public bool grounded = true;
 
+    /// <summary>
+    /// start MainCharacter.cs ketika dipanggil
+    /// </summary>
 	void Start(){
 		rb = GetComponent<Rigidbody2D> ();
 	}
 
-	//method untuk memeriksa collision dari karakter
-	//jika karakter collision dengan ground, grounded = true
-	//jika karakter collision dengan obstacle maka permainan berhenti
-	//@Override
+	/// <summary>
+    /// pindah ke scene lain jika terjadi tabrakan antara 
+    /// main character dengan obstacle
+    /// </summary>
+    /// <param name="coll"></param>
 	void OnCollisionEnter2D(Collision2D coll){
 		if (coll.gameObject.tag == "ground"){
 			this.grounded = true;
@@ -33,7 +37,10 @@ public class MainCharacter : MonoBehaviour {
 	}
 
 
-	// Update is called once per frame
+	/// <summary>
+    /// menekan tombol ↑ untuk melompat
+    /// menekan tombol ↓ untuk menghindari obstacle terbang dengan cara mengecil
+    /// </summary>
 	void Update () {
 		
 		//jika karakter menyentuh tanah, karakter lompat 1x
@@ -44,28 +51,40 @@ public class MainCharacter : MonoBehaviour {
 		if(Input.GetKeyDown("down")){
 			crouch();
 		}
-		//karakter mengecil untuk menghindari obstacle terbang
+		
 		if(Input.GetKeyUp("down")){
 			stand ();
 		}
 	}
+    /// <summary>
+    /// jump
+    /// </summary>
 	private void jump(){
 		rb.AddForce (jumpPower);
 		this.grounded = false;
 		rb.gravityScale = 1f;
 		transform.localScale = new Vector2 (3f, 3f);
 	}
-	private void crouch(){
-				if(!this.grounded){
-					rb.gravityScale = 6;
-					transform.localScale = new Vector2(1.8f,1.8f);
-				}
-				//waktu di tanah karakter menjadi kecil untuk menghindari obstacle terbang
-				else{
-					rb.gravityScale = 1f;
-					transform.localScale = new Vector2(1.8f,1.8f);
-				}
-	}
+    /// <summary>
+    /// setting ukuran dari horseman jika menunduk
+    /// </summary>
+	private void crouch()
+    {
+        if (!this.grounded)
+        {
+            rb.gravityScale = 6;
+            transform.localScale = new Vector2(1.8f, 1.8f);
+        }
+        //waktu di tanah karakter menjadi kecil untuk menghindari obstacle terbang
+        else
+        {
+            rb.gravityScale = 1f;
+            transform.localScale = new Vector2(1.8f, 1.8f);
+        }
+    }
+    /// <summary>
+    /// posisi awal ketika tidak ditekan tombol apapun
+    /// </summary>
 	private void stand(){
 		rb.gravityScale = 1f;
 		transform.localScale = new Vector2(3f,3f);

@@ -8,8 +8,8 @@ public class Obstacle : MonoBehaviour {
 
     
 
-	/// <summary 
-    /// Use this for initialization
+	/// <summary >
+    /// start jika dipanggil
     /// </summary>
 	void Start () {
 		rb = GetComponent<Rigidbody2D> ();
@@ -18,7 +18,9 @@ public class Obstacle : MonoBehaviour {
 
     }
 
-	// Update is called once per frame
+	/// <summary>
+    /// menghancurkan objek jika koordinat x dibawah -10
+    /// </summary>
 	void Update () {
         if (transform.position.x < -10)
         {
@@ -26,14 +28,18 @@ public class Obstacle : MonoBehaviour {
         }
     }
 
-	//Update speed
+	/// <summary>
+    /// menambahkan kecepatan
+    /// </summary>
     private void increaseSpeed() {
         if (speed > -10f) {
             speed -= 0.05f;
         }
     }
-	
-	//Destroy the obstacle
+
+    /// <summary>
+    /// Destroy the obstacle
+    /// </summary>
     private void destroyObstacle() {
         Destroy(gameObject);
     }

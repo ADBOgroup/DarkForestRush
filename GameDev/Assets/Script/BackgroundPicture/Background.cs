@@ -8,8 +8,9 @@ public class Background : MonoBehaviour {
 	//kecepatan awal dari background
 	private float speed = 0.11f;
 
-	// To do -> nge scroll background
-	// background akan bergerak dengan kecepatan yang terus bertambah
+	/// <summary>
+    /// menambahkan kecepatan background jika speed lebih kecil dari 0.25
+    /// </summary>
 	void Update () { 
         if (speed < 0.25f)
         {
@@ -18,13 +19,17 @@ public class Background : MonoBehaviour {
         renderBG();
     }
 
-	//Function to make the Background more fast
+	/// <summary>
+    /// menambahkan variable speed
+    /// </summary>
     private void increaseBGSpeed()
     {
         speed += 0.00000001f;
     }
 	
-	//Function to render frame per frame
+	/// <summary>
+    /// merender background
+    /// </summary>
     private void renderBG()
     {
         Vector2 offset = new Vector2(Time.time * speed, 0);
