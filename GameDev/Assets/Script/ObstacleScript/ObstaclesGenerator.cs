@@ -7,9 +7,9 @@ public class ObstaclesGenerator : MonoBehaviour {
 	public GameObject[] obstacles;
 
 	//Maximum Speed from obstacle
-	public float speedMax = 7.5f;
+	private float speedMax = 7.5f;
 	//Minimum Speed from Obstacle
-	public float speedMin = 5.5f;
+	private float speedMin = 5.5f;
 	// Use this for initialization
 	void Start () {
 		generateObstacles ();

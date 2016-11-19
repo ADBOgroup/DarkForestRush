@@ -7,21 +7,16 @@ public class ScoreManager : MonoBehaviour {
 	public Text scoreText;
 	public Text highScoreText;
 
-	public AudioSource audio;
+	private float scoreCount;
+	private float highScoreCount;	
 
-	public float scoreCount;
-	public float highScoreCount;	
-
-	public float scorePerSecond = 1;
-
-	public bool scoreIncreasing;
+	private float scorePerSecond = 1;
 
 	/// <summary>
     /// start jika dipanggil dan menampilkan high score terakhir
     /// </summary>
 	void Start () {
 		//highscore di simpan dan bakal di tampilkan waktu start
-		audio = GetComponent<AudioSource>();
 		highScoreCount  = PlayerPrefs.GetFloat("highScoreCount");
 		highScoreText.text = "High Score: " + Mathf.Round(highScoreCount);
 	}
@@ -38,17 +33,8 @@ public class ScoreManager : MonoBehaviour {
 			highScoreText.text = "High Score: " + Mathf.Round(highScoreCount);
 			PlayerPrefs.SetFloat("highScoreCount" , Mathf.Round(highScoreCount));
 		}
-		if(scoreText.text.Equals("100")){
-			playSong();
-		}
         PlayerPrefs.SetFloat("scoreCount", Mathf.Round(scoreCount));
 
         scoreText.text = "Score: " + Mathf.Round(scoreCount);
-	}
-    /// <summary>
-    /// memutar sound efek
-    /// </summary>
-	void playSong(){
-		audio.Play ();
 	}
 }

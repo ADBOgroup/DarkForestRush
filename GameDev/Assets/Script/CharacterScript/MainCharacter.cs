@@ -6,13 +6,13 @@ using System.Collections;
 
 public class MainCharacter : MonoBehaviour {
 	//tinggi lompatan karakter
-	public Vector2 jumpPower = new Vector2(0,200);
-	public Rigidbody2D rb;
+	private Vector2 jumpPower = new Vector2(0,200);
+	private Rigidbody2D rb;
 
 
 	//fungsi boolean untuk memeriksa posisi karakter
 	//true jika karakter tidak sedang lompat
-	public bool grounded = true;
+	private bool grounded = true;
 
     /// <summary>
     /// start MainCharacter.cs ketika dipanggil
